@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ad47621-f9c1-4cf7-ae5c-00c8d74f62f4" name="Changes" comment="fddddd">
+    <list default="true" id="1ad47621-f9c1-4cf7-ae5c-00c8d74f62f4" name="Changes" comment="pokus omyl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -55,7 +55,7 @@
       <workItem from="1696864332256" duration="402000" />
       <workItem from="1696864744959" duration="33000" />
       <workItem from="1696864788673" duration="3070000" />
-      <workItem from="1696868493860" duration="1137000" />
+      <workItem from="1696868493860" duration="1421000" />
     </task>
     <task id="LOCAL-00001" summary="fddddd">
       <option name="closed" value="true" />
@@ -81,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696870230011</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pokus omyl">
+      <option name="closed" value="true" />
+      <created>1696870502464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696870502464</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,10 +108,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fddddd" />
-    <option name="LAST_COMMIT_MESSAGE" value="fddddd" />
+    <MESSAGE value="pokus omyl" />
+    <option name="LAST_COMMIT_MESSAGE" value="pokus omyl" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Afinní_ifra$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1696870231764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Afinní_ifra$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1696870734429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Afinní_ifra$affine_cipher.coverage" NAME="affine_cipher Coverage Results" MODIFIED="1696864955498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Afinní_ifra$main.coverage" NAME="main Coverage Results" MODIFIED="1696864843853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

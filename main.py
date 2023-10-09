@@ -55,7 +55,7 @@ def encrypt(text, a, b):
 def decrypt(text, a, b):
     a_inverse = mod_inverse(a, 26)
     if a_inverse is None:
-        return "a není nesoudělné s 26, nelze provést dešifrování."
+        return "a is not coprime with 26, decryption is not possible."
 
     result = ''
     word = ''
@@ -64,21 +64,27 @@ def decrypt(text, a, b):
             char = chr(((a_inverse * (ord(char) - ord('A') - b)) % 26) + ord('A'))
             word += char
         elif char.isdigit():
-            # Caesarova dešifra pro čísla (posun o hodnotu 'a')
             char = chr(((int(char) - a) % 10) + ord('0'))
             word += char
         else:
-            # Implementujte ošetření speciálních znaků
-            pass
+            pass  # Handle special characters if needed
 
         if len(word) == 5:
             result += word
             word = ''
 
-    # Přidejte poslední slovo
     result += word
 
-    # Obnovení původních mezer
-    result = result.replace('XMEZERAX', ' ')
-
     return result
+
+# Příklad použití funkcí
+a = int(input("Zadejte hodnotu a (nesoudělné s 26 a GCD(a, 26) == 1): "))
+b = int(input("Zadejte hodnotu b: "))
+text = input("Zadejte text k zašifrování: ")
+
+filtered_text = filter_input(text)
+encrypted_text = encrypt(filtered_text, a, b)
+decrypted_text = decrypt(encrypted_text, a, b)
+
+print(f"Zašifrovaný text: {encrypted_text}")
+print(f"Dešifrovaný text: {decrypted_text}")
