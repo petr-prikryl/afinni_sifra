@@ -65,7 +65,7 @@ def decrypt(text, a, b):
             if char.isupper():
                 char = chr(((a_inverse * (ord(char) - ord('A') - b)) % 26) + ord('A'))
             else:
-                char = chr(((a_inverse * (ord(char) - ord('a') - b)) % 26) + ord('a'))
+                char = chr(((a_inverse * (ord(char) - ord('a') - b)) % 26) + ord('A'))
             word += char
         elif char.isdigit():
             char = chr(((int(char) - b) % 10) + ord('0'))  # cesarova sifra
