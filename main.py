@@ -41,7 +41,7 @@ def encrypt(text, a, b):
             if count % 5 == 0:
                 result += ' '  # Add space every five characters
         elif char.isdigit():
-            char = chr(((int(char) + a) % 10) + ord('0'))
+            char = chr(((int(char) + b) % 10) + ord('0'))  # Apply Caesar cipher with shift b
             result += char
             count += 1
             if count % 5 == 0:
@@ -52,10 +52,11 @@ def encrypt(text, a, b):
     return result
 
 
+
 def decrypt(text, a, b):
     a_inverse = mod_inverse(a, 26)
     if a_inverse is None:
-        return "a is not coprime with 26, decryption is not possible."
+        return "a není nesoudělné s 26, nelze provést dešifrování."
 
     result = ''
     word = ''
@@ -64,7 +65,7 @@ def decrypt(text, a, b):
             char = chr(((a_inverse * (ord(char) - ord('A') - b)) % 26) + ord('A'))
             word += char
         elif char.isdigit():
-            char = chr(((int(char) - a) % 10) + ord('0'))
+            char = chr(((int(char) - b) % 10) + ord('0'))  # Apply Caesar cipher with shift b
             word += char
         else:
             pass  # Handle special characters if needed
@@ -75,16 +76,51 @@ def decrypt(text, a, b):
 
     result += word
 
+    result = result.replace('XMEZERAX', ' ')  # Restore spaces
+
     return result
 
-# Příklad použití funkcí
-a = int(input("Zadejte hodnotu a (nesoudělné s 26 a GCD(a, 26) == 1): "))
-b = int(input("Zadejte hodnotu b: "))
-text = input("Zadejte text k zašifrování: ")
 
-filtered_text = filter_input(text)
-encrypted_text = encrypt(filtered_text, a, b)
-decrypted_text = decrypt(encrypted_text, a, b)
 
-print(f"Zašifrovaný text: {encrypted_text}")
-print(f"Dešifrovaný text: {decrypted_text}")
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from ui_generated import Ui_MainWindow
+from main import filter_input, encrypt, decrypt
+
+
+class AffineCipherApp(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        # Initialize the UI
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+        # Connect UI elements to functions
+        self.ui.pushButton_encrypt.clicked.connect(self.encrypt_text)
+        self.ui.pushButton_decrypt.clicked.connect(self.decrypt_text)
+
+    def encrypt_text(self):
+        a = int(self.ui.lineEdit_a.text())
+        b = int(self.ui.lineEdit_b.text())
+        text = self.ui.plainTextEdit_input.toPlainText()
+
+        filtered_text = filter_input(text)
+        encrypted_text = encrypt(filtered_text, a, b)
+
+        self.ui.plainTextEdit_output.setPlainText(encrypted_text)
+
+    def decrypt_text(self):
+        a = int(self.ui.lineEdit_a.text())
+        b = int(self.ui.lineEdit_b.text())
+        text = self.ui.plainTextEdit_input.toPlainText()
+        decrypted_text = decrypt(text, a, b)
+        self.ui.plainTextEdit_output.setPlainText(decrypted_text)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = AffineCipherApp()
+    window.show()
+    sys.exit(app.exec_())
