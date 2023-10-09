@@ -15,10 +15,10 @@ def mod_inverse(a, m):
 
 
 def filter_input(text):
-    # Odstranění diakritiky
+    # odstraneni hacku a carek
     text = unidecode(text)
 
-    # Odstranění speciálních znaků (!>.-, apod.)
+    # Odstranění random znaku
     special_chars = ['!', '>', '.', '-', ',']
     for char in special_chars:
         text = text.replace(char, '')
@@ -39,15 +39,15 @@ def encrypt(text, a, b):
             result += char
             count += 1
             if count % 5 == 0:
-                result += ' '  # Add space every five characters
+                result += ' '  # mezery
         elif char.isdigit():
-            char = chr(((int(char) + b) % 10) + ord('0'))  # Apply Caesar cipher with shift b
+            char = chr(((int(char) + b) % 10) + ord('0'))  # cezarovasifra
             result += char
             count += 1
             if count % 5 == 0:
-                result += ' '  # Add space every five characters
+                result += ' '  # mezery
         else:
-            pass  # Handle special characters if needed
+            pass
 
     return result
 
@@ -68,10 +68,10 @@ def decrypt(text, a, b):
                 char = chr(((a_inverse * (ord(char) - ord('a') - b)) % 26) + ord('a'))
             word += char
         elif char.isdigit():
-            char = chr(((int(char) - b) % 10) + ord('0'))  # Apply Caesar cipher with shift b
+            char = chr(((int(char) - b) % 10) + ord('0'))  # cesarova sifra
             word += char
         else:
-            pass  # Handle special characters if needed
+            pass
 
         if len(word) == 5:
             result += word
@@ -79,7 +79,7 @@ def decrypt(text, a, b):
 
     result += word
 
-    result = result.replace('XMEZERAX', ' ')  # Restore spaces only at the end
+    result = result.replace('XMEZERAX', ' ')  # vracecka mezer
 
     return result
 
