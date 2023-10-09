@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ad47621-f9c1-4cf7-ae5c-00c8d74f62f4" name="Changes" comment="jede to">
+    <list default="true" id="1ad47621-f9c1-4cf7-ae5c-00c8d74f62f4" name="Changes" comment="final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asaa.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main1.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +57,8 @@
       <workItem from="1696864332256" duration="402000" />
       <workItem from="1696864744959" duration="33000" />
       <workItem from="1696864788673" duration="3070000" />
-      <workItem from="1696868493860" duration="5258000" />
+      <workItem from="1696868493860" duration="5313000" />
+      <workItem from="1696875088181" duration="193000" />
     </task>
     <task id="LOCAL-00001" summary="fddddd">
       <option name="closed" value="true" />
@@ -129,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696874341211</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="jede to">
+      <option name="closed" value="true" />
+      <created>1696874713183</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696874713183</updated>
+    </task>
+    <task id="LOCAL-00011" summary="final">
+      <option name="closed" value="true" />
+      <created>1696874740371</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696874740371</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,11 +170,13 @@
     <MESSAGE value="pokus omyl" />
     <MESSAGE value="predzmenou" />
     <MESSAGE value="jede to" />
-    <option name="LAST_COMMIT_MESSAGE" value="jede to" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Afinní_ifra$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1696874677115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Afinní_ifra$affine_cipher.coverage" NAME="affine_cipher Coverage Results" MODIFIED="1696864955498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main1_py$main.coverage" NAME="main Coverage Results" MODIFIED="1696875186198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Afinní_ifra$main.coverage" NAME="main Coverage Results" MODIFIED="1696874665928" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
