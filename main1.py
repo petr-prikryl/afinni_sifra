@@ -1,7 +1,4 @@
 
-
-
-
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from ui_generated import Ui_MainWindow
@@ -43,4 +40,3 @@ if __name__ == "__main__":
     window = AffineCipherApp()
     window.show()
     sys.exit(app.exec_())
-

@@ -52,7 +52,6 @@ def encrypt(text, a, b):
     return result
 
 
-
 def decrypt(text, a, b):
     a_inverse = mod_inverse(a, 26)
     if a_inverse is None:
@@ -82,4 +81,3 @@ def decrypt(text, a, b):
     result = result.replace('XMEZERAX', ' ')  # vracecka mezer
 
     return result
-
