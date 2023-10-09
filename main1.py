@@ -1,7 +1,12 @@
+
+
+
+
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from ui_generated import Ui_MainWindow
-from main import filter_input, encrypt,decrypt
+from main import filter_input, encrypt, decrypt
+
 
 class AffineCipherApp(QMainWindow):
     def __init__(self):
@@ -28,14 +33,14 @@ class AffineCipherApp(QMainWindow):
     def decrypt_text(self):
         a = int(self.ui.lineEdit_a.text())
         b = int(self.ui.lineEdit_b.text())
-         # text = self.ui.plainTextEdit_input.toPlainText()
-        text1="rgvt"
-        decrypted_text = decrypt(text1, a, b)
-
+        text = self.ui.plainTextEdit_input.toPlainText()
+        decrypted_text = decrypt(text, a, b)
         self.ui.plainTextEdit_output.setPlainText(decrypted_text)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = AffineCipherApp()
     window.show()
     sys.exit(app.exec_())
+
