@@ -62,7 +62,10 @@ def decrypt(text, a, b):
     word = ''
     for char in text:
         if char.isalpha():
-            char = chr(((a_inverse * (ord(char) - ord('A') - b)) % 26) + ord('A'))
+            if char.isupper():
+                char = chr(((a_inverse * (ord(char) - ord('A') - b)) % 26) + ord('A'))
+            else:
+                char = chr(((a_inverse * (ord(char) - ord('a') - b)) % 26) + ord('a'))
             word += char
         elif char.isdigit():
             char = chr(((int(char) - b) % 10) + ord('0'))  # Apply Caesar cipher with shift b
@@ -76,6 +79,7 @@ def decrypt(text, a, b):
 
     result += word
 
-    result = result.replace('XMEZERAX', ' ')  # Restore spaces
+    result = result.replace('XMEZERAX', ' ')  # Restore spaces only at the end
 
     return result
+
